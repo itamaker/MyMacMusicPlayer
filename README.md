@@ -1,14 +1,11 @@
-My Mac Music Player
-=========
+My Mac Music Player [![Build Status](https://travis-ci.org/isaced/MyMacMusicPlayer.svg?branch=master)](https://travis-ci.org/isaced/MyMacMusicPlayer)
+-
 
----
+一边学习 macOS 窗体程序设计（[博客](http://www.isaced.com/post-217.html)），一边捣鼓出来的音乐播放器...
 
-~~一直没找到Mac中意的音乐播放器，自己写了个，目前功能还很简单，后面会继续更新的！~~
+- AudioToolbox ID3 音频元数据获取
+- NSWindow 拖拽播放
+- UI 定制化
+- Sketch 部分图标绘制
 
-初学 OSX 窗体程序设计的一个小东西...
-
-![preview](https://raw.githubusercontent.com/isaced/MyMacMusicPlayer/master/preview.png)
-
----
-
-详细介绍页面：[http://www.isaced.com/post-217.html](http://www.isaced.com/post-217.html) 
+<p align="center"><img src="https://raw.githubusercontent.com/isaced/MyMacMusicPlayer/master/preview.png" alt="Dance" width="384"/></p>

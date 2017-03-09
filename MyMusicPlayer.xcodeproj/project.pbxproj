@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B5DA6951E55487E009340E6 /* Asssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B5DA6941E55487E009340E6 /* Asssets.xcassets */; };
+		0B5DA6991E554AC0009340E6 /* ProgressSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DA6981E554AC0009340E6 /* ProgressSliderCell.m */; };
 		0D069249179BB87E00D51C41 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D069248179BB87E00D51C41 /* Cocoa.framework */; };
 		0D069253179BB87E00D51C41 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D069251179BB87E00D51C41 /* InfoPlist.strings */; };
 		0D069255179BB87E00D51C41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D069254179BB87E00D51C41 /* main.m */; };
@@ -21,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B5DA6941E55487E009340E6 /* Asssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asssets.xcassets; sourceTree = "<group>"; };
+		0B5DA6971E554AC0009340E6 /* ProgressSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressSliderCell.h; sourceTree = "<group>"; };
+		0B5DA6981E554AC0009340E6 /* ProgressSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressSliderCell.m; sourceTree = "<group>"; };
 		0D069245179BB87E00D51C41 /* MyMusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D069248179BB87E00D51C41 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0D06924B179BB87E00D51C41 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -57,6 +62,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B5DA6961E554AAA009340E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0B5DA6971E554AC0009340E6 /* ProgressSliderCell.h */,
+				0B5DA6981E554AC0009340E6 /* ProgressSliderCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0BFF8F671E54605D0072DB2A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0B5DA6941E55487E009340E6 /* Asssets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		0D06923C179BB87E00D51C41 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +120,8 @@
 		0D06924E179BB87E00D51C41 /* MyMusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				0B5DA6961E554AAA009340E6 /* Views */,
+				0BFF8F671E54605D0072DB2A /* Resources */,
 				0D06925A179BB87E00D51C41 /* AppDelegate.h */,
 				0D06925B179BB87E00D51C41 /* AppDelegate.m */,
 				0D06925D179BB87E00D51C41 /* MainMenu.xib */,
@@ -149,7 +173,7 @@
 		0D06923D179BB87E00D51C41 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = isaced;
 			};
 			buildConfigurationList = 0D069240179BB87E00D51C41 /* Build configuration list for PBXProject "MyMusicPlayer" */;
@@ -176,6 +200,7 @@
 			files = (
 				0D069253179BB87E00D51C41 /* InfoPlist.strings in Resources */,
 				0D069259179BB87E00D51C41 /* Credits.rtf in Resources */,
+				0B5DA6951E55487E009340E6 /* Asssets.xcassets in Resources */,
 				0D06925F179BB87E00D51C41 /* MainMenu.xib in Resources */,
 				0D069272179BBA8D00D51C41 /* MainWindowController.xib in Resources */,
 			);
@@ -190,6 +215,7 @@
 			files = (
 				0D069255179BB87E00D51C41 /* main.m in Sources */,
 				0D06925C179BB87E00D51C41 /* AppDelegate.m in Sources */,
+				0B5DA6991E554AC0009340E6 /* ProgressSliderCell.m in Sources */,
 				0D069271179BBA8D00D51C41 /* MainWindowController.m in Sources */,
 				0D06927B179BCEA500D51C41 /* MusicTools.m in Sources */,
 			);
@@ -229,19 +255,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -250,7 +282,9 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
@@ -262,22 +296,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
@@ -287,10 +328,12 @@
 		0D069263179BB87E00D51C41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyMusicPlayer/MyMusicPlayer-Prefix.pch";
 				INFOPLIST_FILE = "MyMusicPlayer/MyMusicPlayer-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -299,10 +342,12 @@
 		0D069264179BB87E00D51C41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyMusicPlayer/MyMusicPlayer-Prefix.pch";
 				INFOPLIST_FILE = "MyMusicPlayer/MyMusicPlayer-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -327,6 +372,7 @@
 				0D069264179BB87E00D51C41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
